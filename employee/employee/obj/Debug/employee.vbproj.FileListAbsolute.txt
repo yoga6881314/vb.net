@@ -1,0 +1,14 @@
+C:\Users\2015NEC21\source\repos\employee\employee\bin\Debug\employee.exe.config
+C:\Users\2015NEC21\source\repos\employee\employee\bin\Debug\employee.exe
+C:\Users\2015NEC21\source\repos\employee\employee\bin\Debug\employee.pdb
+C:\Users\2015NEC21\source\repos\employee\employee\bin\Debug\employee.xml
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.vbprojAssemblyReference.cache
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.main.resources
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.Resources.resources
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.vbproj.GenerateResource.cache
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.vbproj.CoreCompileInputs.cache
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.exe
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.xml
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.pdb
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.login.resources
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.newemployee.resources
