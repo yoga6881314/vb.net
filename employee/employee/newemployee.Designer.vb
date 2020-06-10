@@ -143,6 +143,7 @@ Partial Class newemployee
         '
         'txtNewTele
         '
+        Me.txtNewTele.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txtNewTele.Location = New System.Drawing.Point(507, 311)
         Me.txtNewTele.Name = "txtNewTele"
         Me.txtNewTele.Size = New System.Drawing.Size(238, 25)
@@ -150,6 +151,7 @@ Partial Class newemployee
         '
         'txtNewMail
         '
+        Me.txtNewMail.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.txtNewMail.Location = New System.Drawing.Point(507, 265)
         Me.txtNewMail.Name = "txtNewMail"
         Me.txtNewMail.Size = New System.Drawing.Size(238, 25)
@@ -164,6 +166,7 @@ Partial Class newemployee
         '
         'txtNewKata
         '
+        Me.txtNewKata.ImeMode = System.Windows.Forms.ImeMode.Katakana
         Me.txtNewKata.Location = New System.Drawing.Point(507, 85)
         Me.txtNewKata.Name = "txtNewKata"
         Me.txtNewKata.Size = New System.Drawing.Size(385, 25)
@@ -261,6 +264,7 @@ Partial Class newemployee
         '
         'txtNewName
         '
+        Me.txtNewName.ImeMode = System.Windows.Forms.ImeMode.Hiragana
         Me.txtNewName.Location = New System.Drawing.Point(507, 40)
         Me.txtNewName.Name = "txtNewName"
         Me.txtNewName.Size = New System.Drawing.Size(385, 25)

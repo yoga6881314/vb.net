@@ -50,6 +50,10 @@ Partial Class main
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnShowAll = New System.Windows.Forms.Button()
         CType(Me.dgvUserdata, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -62,7 +66,7 @@ Partial Class main
         '
         'btnNewEpl
         '
-        Me.btnNewEpl.Location = New System.Drawing.Point(814, 12)
+        Me.btnNewEpl.Location = New System.Drawing.Point(597, 9)
         Me.btnNewEpl.Name = "btnNewEpl"
         Me.btnNewEpl.Size = New System.Drawing.Size(159, 39)
         Me.btnNewEpl.TabIndex = 3
@@ -71,7 +75,7 @@ Partial Class main
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(1016, 13)
+        Me.btnLogout.Location = New System.Drawing.Point(1582, 12)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(159, 39)
         Me.btnLogout.TabIndex = 4
@@ -207,7 +211,6 @@ Partial Class main
         Me.dgvUserdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvUserdata.Location = New System.Drawing.Point(344, 57)
         Me.dgvUserdata.Name = "dgvUserdata"
-        Me.dgvUserdata.ReadOnly = True
         Me.dgvUserdata.RowHeadersVisible = False
         Me.dgvUserdata.RowHeadersWidth = 62
         Me.dgvUserdata.RowTemplate.Height = 27
@@ -286,11 +289,49 @@ Partial Class main
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "特技："
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(1059, 12)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(202, 39)
+        Me.btnUpdate.TabIndex = 30
+        Me.btnUpdate.Text = "IDを指定して編集"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
+        'txtID
+        '
+        Me.txtID.Location = New System.Drawing.Point(798, 17)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(224, 25)
+        Me.txtID.TabIndex = 31
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(1288, 12)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(195, 39)
+        Me.btnCancel.TabIndex = 32
+        Me.btnCancel.Text = "IDを指定して削除"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnShowAll
+        '
+        Me.btnShowAll.Location = New System.Drawing.Point(344, 9)
+        Me.btnShowAll.Name = "btnShowAll"
+        Me.btnShowAll.Size = New System.Drawing.Size(159, 39)
+        Me.btnShowAll.TabIndex = 33
+        Me.btnShowAll.Text = "全件表示"
+        Me.btnShowAll.UseVisualStyleBackColor = True
+        '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1912, 1038)
+        Me.Controls.Add(Me.btnShowAll)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.txtID)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -353,4 +394,8 @@ Partial Class main
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents txtID As TextBox
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnShowAll As Button
 End Class
