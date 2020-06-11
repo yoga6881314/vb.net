@@ -5,7 +5,17 @@ Public Class newemployee
     Private Sub btnImagePick_Click(sender As Object, e As EventArgs) Handles btnImagePick.Click
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             PictureBox1.Load(OpenFileDialog1.FileName)
-            ImageName = OpenFileDialog1.FileName
+            'get the image file name and copy to another folder
+            Dim path As String = System.IO.Path.GetFileName(OpenFileDialog1.FileName)
+            Dim newpath As String = "C:\images\" + path
+            Try
+                System.IO.File.Copy(OpenFileDialog1.FileName, newpath)
+            Catch ex As Exception
+                MessageBox.Show("image name is already exist")
+            End Try
+
+            'copy path to imageName for upload to DB
+            ImageName = newpath
             'Console.WriteLine(OpenFileDialog1.FileName)
         End If
     End Sub
@@ -13,7 +23,7 @@ Public Class newemployee
     'cancel the seleced picture
     Private Sub btnImageCancel_Click(sender As Object, e As EventArgs) Handles btnImageCancel.Click
         PictureBox1.Image = Nothing
-        ImageName = ""
+        ImageName = ""   'clear uploaded file name
     End Sub
 
     'check input data is not empty

@@ -53,8 +53,11 @@ Public Class main
                     Dim i As Integer
                     If ImageReader.HasRows Then
                         While ImageReader.Read()
+                            Console.WriteLine(ImageReader(11).ToString)
                             If ImageReader(11).ToString <> "" Then
                                 dgvUserdata.Rows(i).Cells(0).Value = New Bitmap(ImageReader(11).ToString)
+                                i += 1
+                            Else
                                 i += 1
                             End If
                         End While
@@ -93,6 +96,8 @@ Public Class main
                         While ImageReader.Read()
                             If ImageReader(11).ToString <> "" Then
                                 dgvUserdata.Rows(i).Cells(0).Value = New Bitmap(ImageReader(11).ToString)
+                                i += 1
+                            Else
                                 i += 1
                             End If
                         End While
@@ -179,6 +184,8 @@ Public Class main
                             While ImageReader.Read()
                                 If ImageReader(11).ToString <> "" Then
                                     dgvUserdata.Rows(i).Cells(0).Value = New Bitmap(ImageReader(11).ToString)
+                                    i += 1
+                                Else
                                     i += 1
                                 End If
                             End While

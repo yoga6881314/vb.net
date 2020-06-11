@@ -134,9 +134,9 @@ Public Class update
 
                     sqlcommand.Parameters.Add(New SqlParameter("@UserImage", SqlDbType.NVarChar, 100))
                     If ImageName <> "" Then
-                        sqlcommand.Parameters("@UserImage").Value = ImageName
+                        sqlcommand.Parameters("@UserImage").Value = ImageName 'if new file uploaded, update image
                     Else
-                        sqlcommand.Parameters("@UserImage").Value = DBImageName
+                        sqlcommand.Parameters("@UserImage").Value = DBImageName 'if no file uploaded, remain DB image
                     End If
 
 
@@ -166,13 +166,23 @@ Public Class update
     Private Sub btnImagePick_Click(sender As Object, e As EventArgs) Handles btnImagePick.Click
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             PictureBox1.Load(OpenFileDialog1.FileName)
+            'get the image file name and copy to another folder
+            Dim path As String = System.IO.Path.GetFileName(OpenFileDialog1.FileName)
+            Dim newpath As String = "C:\images\" + path
+            Try
+                System.IO.File.Copy(OpenFileDialog1.FileName, newpath)
+            Catch ex As Exception
+                MessageBox.Show("image is already exist")
+            End Try
             'Console.WriteLine(OpenFileDialog1.FileName)
-            ImageName = OpenFileDialog1.FileName
+
+            'copy path to imageName for upload to DB
+            ImageName = newpath
         End If
     End Sub
 
     Private Sub btnImageCancel_Click(sender As Object, e As EventArgs) Handles btnImageCancel.Click
         PictureBox1.Image = Nothing
-        ImageName = ""
+        ImageName = ""    'clear uploaded file name
     End Sub
 End Class
