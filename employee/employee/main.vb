@@ -240,8 +240,40 @@ Public Class main
             Return False
         Else
             TempID = Int32.Parse(txtID.Text)
-            Return True
+            If checkIdIsExist(TempID) = False Then
+                MessageBox.Show("User ID does not exist")
+                Return False
+            Else
+                Return True
+            End If
+
         End If
+    End Function
+
+    Private Function checkIdIsExist(ByVal id As Integer) As Boolean
+        Dim IdExist As Boolean = False
+        Using connection As New SqlConnection(My.Settings.connString)
+            Const sql3 As String = "select UserID from employee.UsersData"
+            Using SqlCommand As New SqlCommand(sql3, connection)
+                Try
+                    connection.Open()
+                    Dim dataReader As SqlDataReader = SqlCommand.ExecuteReader()
+                    If dataReader.HasRows Then
+                        While dataReader.Read()
+                            If id.ToString = dataReader(0).ToString Then
+                                Return True
+                                Exit Function
+                            Else
+                                IdExist = False
+                            End If
+                        End While
+                    End If
+                Catch ex As Exception
+
+                End Try
+            End Using
+        End Using
+        Return IdExist
     End Function
 
     'delete data from ID
