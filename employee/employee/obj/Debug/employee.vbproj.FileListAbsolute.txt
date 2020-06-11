@@ -12,3 +12,5 @@ C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.xml
 C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.pdb
 C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.login.resources
 C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.newemployee.resources
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.update.resources
+C:\Users\2015NEC21\source\repos\employee\employee\obj\Debug\employee.Form1.resources

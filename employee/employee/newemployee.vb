@@ -1,15 +1,19 @@
 ﻿Imports System.Data.SqlClient
 Public Class newemployee
     'select a picture
+    Private ImageName As String = ""
     Private Sub btnImagePick_Click(sender As Object, e As EventArgs) Handles btnImagePick.Click
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             PictureBox1.Load(OpenFileDialog1.FileName)
+            ImageName = OpenFileDialog1.FileName
+            'Console.WriteLine(OpenFileDialog1.FileName)
         End If
     End Sub
 
     'cancel the seleced picture
     Private Sub btnImageCancel_Click(sender As Object, e As EventArgs) Handles btnImageCancel.Click
         PictureBox1.Image = Nothing
+        ImageName = ""
     End Sub
 
     'check input data is not empty
@@ -108,6 +112,10 @@ Public Class newemployee
                     SqlCommand.Parameters.Add(New SqlParameter("@UserSpecial", SqlDbType.NVarChar, 40))
                     SqlCommand.Parameters("@UserSpecial").Value = txtNewSpecial.Text
                     Console.WriteLine(SqlCommand.Parameters("@UserSpecial").Value)
+
+                    SqlCommand.Parameters.Add(New SqlParameter("@UserImage", SqlDbType.NVarChar, 100))
+                    SqlCommand.Parameters("@UserImage").Value = ImageName
+
 
                     Try
                         connection.Open()
