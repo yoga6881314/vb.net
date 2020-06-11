@@ -250,6 +250,7 @@ Public Class main
         End If
     End Function
 
+    'check ID which is wanted to update or delete does existed
     Private Function checkIdIsExist(ByVal id As Integer) As Boolean
         Dim IdExist As Boolean = False
         Using connection As New SqlConnection(My.Settings.connString)
